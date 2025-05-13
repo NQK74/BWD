@@ -1,0 +1,152 @@
+  <!DOCTYPE html>
+  <html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Community Layout</title>
+    <link rel="stylesheet" href="community.css">
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo1.webp" alt="Home Image" class="home-image">
+        VIETNAM CULTURE
+      </div>
+      <div class="nav-items">
+
+        <button>
+          <img src="Home.webp" class="nav-items-image">
+        HOME
+        </button>
+
+        <button>
+          <img src="ci.png" class="nav-items-image">
+        CHECK IN
+        </button>
+
+        <button>
+          <img src="" class="nav-items-image">
+        COMMUNITY
+        </button>
+
+        <button>
+          <img src="" class="nav-items-image">
+        MAP
+        </button>
+
+        <button>
+          <img src="avt.jpg" class="nav-items-image" alt="User Avatar">
+          PROFILE
+        </button>
+       
+        <button>
+          <img src="ic-menu@3x.png" alt="Profile" class="nav-items-image"><p>MORE</p>
+        </button>
+
+      </div>
+    </nav>
+
+    <aside class="sidebar">
+      <div class="recommendations">
+        <h3>Recomment</h3>
+        <ul>
+          <li>Khám phá các tính năng mới</li>
+          <li>Cập nhật phần mềm</li>
+          <li>Tham gia cộng đồng</li>
+          <li>Xem các sự kiện sắp tới</li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="content-section">
+        <!-- Create Post -->
+        <div class="create-post">
+          <div class="user-info">
+            <img src="avt.jpg" class="avatar" alt="User Avatar">
+            <textarea class="post-input" placeholder="Bạn đang nghĩ gì thế?"></textarea>
+          </div>
+          <div class="button-container">
+            <button class="image-btn">📷 Ảnh/Video</button>
+            <button class="emoji-btn">😊 Cảm xúc</button>
+            <button class="post-btn">Đăng</button>
+          </div>
+        </div>
+
+        <!-- Posts -->
+        <div class="post">
+          <div class="post-header">
+            <img src="avatar-demo.jpg" class="avatar" alt="avatar">
+            <div>
+              <h3>Mi Xào Chua Ngọt</h3>
+              <small>3 giờ trước · 😊</small>
+            </div>
+          </div>
+          <p>1 người dùng X đã tìm hiểu rồi dựng lại vị trí hài cốt của Nibelung Vua ròng @wormlandalice</p>
+          <div class="post-actions">
+            <button class="like-btn" data-count="717" onclick="toggleLike(this)">👍<span class="like-count">717</span> <span class="like-text">Thích</span></button>
+            <button class="">💬<span> 103 Bình luận</span>
+            <button>↪️<span> 48 Chia sẻ</span>
+          </div>
+        </div>
+
+        <!-- Bài 2 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="avatar2.jpg" class="avatar" alt="avatar người dùng 2">
+            <div>
+              <h3>Lan Nở Rộ</h3>
+              <small>1 giờ trước · 😍</small>
+            </div>
+          </div>
+          <p>Vừa hoàn thành chuyến đi Đà Lạt mùa hoa mai anh đào, cảnh đẹp mê hồn! 🌸📸</p>
+          <div class="post-actions">
+            <button class="like-btn" data-count="542" onclick="toggleLike(this)">👍 <span class="like-count">542</span> <span class="like-text">Thích</span></button>
+            <button><span>💬 87 Bình luận</span>
+            <button><span>↪️ 23 Chia sẻ</span>
+          </div>
+        </div>
+
+        <!-- Bài 3 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="avatar3.jpg" class="avatar" alt="avatar người dùng 3">
+            <div>
+              <h3>Minh “Coder”</h3>
+              <small>30 phút trước · 💻</small>
+            </div>
+          </div>
+          <p>Chia sẻ snippet C++ xử lý BST với dữ liệu chuỗi, bạn nào cần tham khảo thì vào xem nhé! 📂🔗</p>
+          <div class="post-actions">
+            <button class="like-btn" data-count="312" onclick="toggleLike(this)">👍<span class="like-count">312</span> <span class="like-text">Thích</span></button>
+            <button><span>💬 54 Bình luận</span>
+            <button><span>↪️ 12 Chia sẻ</span>
+          </div>
+        </div>
+
+        <!-- Bài 4 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="avatar4.jpg" class="avatar" alt="avatar người dùng 4">
+            <div>
+              <h3>Thuỳ “Foodie”</h3>
+              <small>15 phút trước · 🍲</small>
+            </div>
+          </div>
+          <p>Ai biết quán nem nướng Nha Trang ngon ở Sài Gòn ở đâu chỉ mình với! 😋🔥</p>
+          <div class="post-actions">
+            <button class="like-btn" data-count="198" onclick="toggleLike(this)">👍<span class="like-count">198</span> <span class="like-text">Thích</span></button>
+            <button><span>💬 34 Bình luận</span>
+            <button><span>↪️ 5 Chia sẻ</span>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <script src="community.js"></script>
+  </body>
+  </html>

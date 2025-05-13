@@ -1,0 +1,372 @@
+.body{
+    background-color: black;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+    background: linear-gradient(135deg, #d84b16, #f1a502, #ff5e00);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.home-image {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    clip-path: circle(90px at 50% 50%);
+}
+
+.navbar .nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%; /* Thêm chiều cao đầy đủ */
+    justify-content: flex-start; /* Căn các item từ đầu */
+}
+
+.navbar .nav-items-image {
+   width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.navbar .nav-items span {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-items span:hover {
+    color: #007bff;
+}
+.navbar button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    justify-content: flex-start;
+    padding-left: 15px;
+    height: 55px;
+    font-weight: bold;
+ 
+}
+.navbar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.navbar button span {
+    font-size: 16px;
+    margin-right: 15px; 
+     flex-grow: 1; 
+    text-align: left; 
+    margin-left: 10px; 
+}
+
+/* ========== Sidebar ========== */
+.sidebar {
+    width: 300px;
+    background: linear-gradient(135deg, #ff6347, #ff9900, #ffcc00);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;  /* Đảm bảo chiều cao của sidebar luôn bằng với chiều cao cửa sổ trình duyệt */
+    overflow-y: auto;
+    z-index: 999; 
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-sizing: border-box;
+    /* Thêm shadow để tách biệt */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ========== Main Content ========== */
+.main-content {
+    margin-left: 320px;
+    margin-right: 320px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* ========== Content Section ========== */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* ========== Avatar ========== */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* ========== Create Post ========== */
+.create-post {
+    padding: 10px 15px;
+    background: #f5f5f5;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-input {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    resize: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.post-input:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #fff;
+}
+
+/* ========== Button Styles ========== */
+button {
+    padding: 10px 16px;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+button:active {
+    transform: scale(0.98);
+    opacity: 0.85;
+}
+
+.video-btn {
+    background-color: #e74c3c;
+}
+
+.image-btn {
+    background-color: #2ecc71;
+}
+
+.emoji-btn {
+    background-color: #f39c12;
+    margin-right: auto;
+}
+
+.post-btn {
+    background-color: #3498db;
+    align-self: flex-end;
+}
+
+/* Button Layout */
+.create-post .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+/* ========== Post Container ========== */
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Khoảng cách giữa các bài post */
+    width: 100%;
+}
+
+/* ========== Post Container ========== */
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Khoảng cách giữa các bài post */
+    width: 100%;
+}
+
+/* ========== Post ========== */
+.post {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px; /* Đảm bảo độ rộng tối đa của bài post */
+    flex: 1 1 calc(33% - 30px); /* Chia thành 3 cột, giảm margin */
+    box-sizing: border-box;
+    margin-bottom: 30px; /* Tăng khoảng cách dưới mỗi bài post */
+}
+
+/* ========== Hover Effect ========== */
+.post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ========== Post Header & Content ========== */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-content {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ========== Post Actions ========== */
+.post-actions {
+    display: flex;
+    justify-content: flex-end;  /* Căn các hành động về phía bên phải */
+    gap: 15px;                  /* Khoảng cách giữa các hành động */
+    margin-top: 15px;
+    font-size: 14px;
+    padding-right: 10px;        /* Padding tùy chọn để tránh sát mép */
+}
+
+.post-actions button {
+    color: #000 ; /* Đặt màu chữ thành đen */
+}
+.post-actions span {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.post-actions span:hover {
+    color: #007bff;
+}   
+
+.post-actions.btn{
+    font color: black;
+}
+@media (max-width: 991px) {
+  .navbar,
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .home-image {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0;
+  }
+
+  .nav-items {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+
+  .post {
+    flex: 1 1 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .post-input {
+    font-size: 14px;
+    height: 80px;
+  }
+
+  .post-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
