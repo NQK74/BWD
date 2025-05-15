@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bản đồ Việt Nam - Hiển thị thông tin tỉnh</title>
+  <link rel="stylesheet" href="map.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <button id="toggle-theme">🌙 Chế độ tối</button>
+
+<div id="left-pane">
+  <input type="text" id="search" placeholder="Tìm tỉnh..." list="province-list"/>
+<datalist id="province-list"></datalist>
+
+  <div class="tooltip" id="tooltip"></div>
+</div>
+
+<div id="right-pane">
+  <div id="info-content">
+    Nhấn vào tỉnh để xem thông tin chi tiết.
+    <div id="tabs" style="margin-top: 10px; display: none;">
+      <button data-tab="tongquan">Tổng quan</button>
+      <button data-tab="lehoi">Lễ hội</button>
+      <button data-tab="amthuc">Ẩm thực</button>
+      <button data-tab="lichsu">Lịch sử</button>
+    </div>
+    <div id="tab-content"></div>
+  </div>
+</div>
+
+
+</div>
+
+<script src="map.js"></script>
+</body>
+</html>
