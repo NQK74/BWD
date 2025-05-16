@@ -614,3 +614,11 @@ h4:hover {
   .contact-form textarea.form-control {
     resize: none;
   }
+}
+
+.btn-submit {
+  background-color: red;
+  color: rgb(255, 255, 255);
+  width: 90px;
+  border: none;
+}
