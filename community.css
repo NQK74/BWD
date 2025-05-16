@@ -557,3 +557,68 @@ button:active {
     margin-bottom: 5px;
   }
 }
+
+/* Thanh điều hướng dưới dành cho mobile */
+@media (max-width: 768px) {
+  .navbar, .sidebar {
+    display: none;
+  }
+
+  .navbar.show, .sidebar.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #d84b16, #f1a502, #ff5e00);
+    z-index: 1000;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sidebar.show {
+    top: auto;
+    bottom: 60px;
+    border-top: 1px solid #ccc;
+  }
+
+  .mobile-bottom-bar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #d84b16, #f1a502, #ff5e00);
+    border-top: 2px solid #ffb347;
+    padding: 10px 0;
+    z-index: 9999;
+  }
+
+  .mobile-bottom-bar button {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 10px;       /* giảm padding ngang */
+    border-radius: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;             /* không chiếm full chiều ngang */
+    min-width: 40px;         /* đặt min-width để nút không quá nhỏ */
+    flex-shrink: 0;
+    text-align: center;
+}
+  .mobile-bottom-bar button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+  }
+
+  body {
+    padding-bottom: 70px; /* để không bị che */
+  }
+}

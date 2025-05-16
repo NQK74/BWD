@@ -69,3 +69,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("seeAllBtn").style.display = "none";
   }
 });
+
+// Toggle navbar và sidebar trên mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleNav = document.getElementById("toggleNav");
+  const toggleSidebar = document.getElementById("toggleSidebar");
+  const navbar = document.querySelector(".navbar");
+  const sidebar = document.querySelector(".sidebar");
+
+  toggleNav.addEventListener("click", function () {
+    navbar.classList.toggle("show");
+    sidebar.classList.remove("show");
+  });
+
+  toggleSidebar.addEventListener("click", function () {
+    sidebar.classList.toggle("show");
+    navbar.classList.remove("show");
+  });
+});
