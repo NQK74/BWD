@@ -1,6 +1,11 @@
 /* Main Styles for Vietnam Culture Website */
 
 /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 :root {
     --primary-color: #d4232b;
     --secondary-color: #ffde59;
@@ -229,8 +234,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .tradition-card img {
     transition: transform 0.5s;
-    height: 220px; /* Đảm bảo chiều cao cố định */
-    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+    height: 220px; 
+    object-fit: cover; 
     width: 100%;
 }
 
@@ -256,9 +261,9 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.5s;
     border: 5px solid white;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 150px; /* Đảm bảo kích thước đồng đều */
-    height: 150px; /* Đảm bảo kích thước đồng đều */
-    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
 }
 
 .cuisine-item:hover img {
@@ -284,13 +289,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
-    height: 250px; /* Đảm bảo chiều cao cố định */
+    height: 250px;
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+    object-fit: cover; 
     transition: transform 0.5s;
 }
 
