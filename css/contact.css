@@ -24,7 +24,7 @@ main {
 
 body {
   height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.3)50%, rgba(0, 0, 0, 0.3)50%), url(../img/bg-contact.avif) no-repeat center center fixed;
+  background: linear-gradient(90deg, #cf79e5, #65cbea, #FBCFDB);
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
   align-items: center;
@@ -38,7 +38,7 @@ header {
   left: 0;
   width: 100%;
   height: 90px;
-  background: linear-gradient(to left, #FDD273, #D6976B, #A38772);
+  background: linear-gradient(45deg, #63d7d1, #76e683, #FBCFDB, #D6976B, #A38772);
   /*lam mo*/
   box-shadow: 0 2px 5px rgba(12, 12, 12, 0.5);
   display: flex;
@@ -59,7 +59,6 @@ header {
   padding: 1.5rem;
   height: 90px;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .tittle {
@@ -74,6 +73,16 @@ header {
   color: #ffffff;
   margin-bottom: 10px;
   align-items: center;
+}
+
+.dropdown-item:hover {
+  background: #27f4f1;
+  color: black;
+}
+
+.dropdown-item:active {
+  background: #a7e690;
+  color: black;
 }
 
 /* menubar */
@@ -311,10 +320,20 @@ h4:hover {
 }
 
 .btn-contact {
-  background-color: #A2D2FF;
+  background-color: #fdfdfd;
+  border: none;
   width: 100px;
   height: 40px;
   border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-contact:hover {
+  background-color: #14f3e1f2;
+}
+
+.icons:hover {
+  transform: translateY(-3px);
 }
 
 .card.bg-card {
@@ -326,6 +345,7 @@ h4:hover {
   border-radius: 20px;
   max-height: 375px;
   animation: pulseCard 2s ease-in-out infinite;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes pulseCard {
@@ -367,12 +387,16 @@ h4:hover {
   }
 
   h4 {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .card {
-    max-height: 320px;
+
+    height: 270px;
+    width: 140px;
   }
+
+
 
   .social-icon {
     font-size: 12px;
@@ -418,6 +442,16 @@ h4:hover {
 
   .user-login {
     display: none !important;
+  }
+
+  .card {
+    height: 370px;
+    width: 250px;
+    padding: 10px;
+  }
+
+  h4 {
+    font-size: 20px;
   }
 
 }
@@ -484,52 +518,54 @@ h4:hover {
 
   .card {
     height: 400px;
-  }
-}
+    margin-top: 200px;
 
-@media screen and (max-width: 1280.02px) {
-  nav.menu-bar {
-    display: none;
+
   }
 
-  .user-login {
-    display: none !important;
+  @media screen and (max-width: 1280.02px) {
+    nav.menu-bar {
+      display: none;
+    }
+
+    .user-login {
+      display: none !important;
+    }
+
+    .fixed-right {
+      display: flex;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      flex-direction: column;
+    }
+
+    .navbar-toggler-icon {
+      display: flex;
+      top: 1rem;
+      right: 1rem;
+      width: 40px;
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .navbar-toggler-icon,
+    .navbar {
+      display: flex;
+    }
+
+    .slide-close-btn {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+    }
   }
 
-  .fixed-right {
-    display: flex;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    flex-direction: column;
-  }
-
-  .navbar-toggler-icon {
-    display: flex;
-    top: 1rem;
-    right: 1rem;
-    width: 40px;
-    font-size: 24px;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
-  }
-
-  .navbar-toggler-icon,
-  .navbar {
-    display: flex;
-  }
-
-  .slide-close-btn {
-    display: block;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-  }
-}
-
-/* hết header */
+  /* hết header */
