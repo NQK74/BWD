@@ -1,0 +1,13 @@
+cd E:\DemoMapVN
+
+git init 
+
+git remote add origin https://github.com/NQK74/BWD.git
+
+git checkout map
+
+git add .
+
+git commit "  " 
+
+git push -u origin
