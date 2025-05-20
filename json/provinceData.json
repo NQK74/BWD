@@ -1,0 +1,67 @@
+{
+  "Hà Nội": {
+    "danSo": "8.435.700 người",
+    "dienTich": "3.359,82 km²",
+  
+    "leHoi": {
+      "image": "/img/chuahuong.jpg",
+      "text": "Lễ hội Gióng và Lễ hội Chùa Hương là những lễ hội truyền thống lớn tại Hà Nội."
+    },
+    "amThuc": {
+      "image": "/img/pho.jpg",
+      "text": "Ẩm thực Hà Nội nổi tiếng với phở, bún chả, và chả cá Lã Vọng."
+    },
+    "lichSu": {
+      "image": "/img/thanglong.jpg",
+      "text": "Hà Nội là thủ đô nghìn năm văn hiến, từng là kinh đô Thăng Long."
+    },
+    "moTa": {
+      "image": "/img/HoanKiem.jpg",
+      "text": "Hà Nội là trung tâm chính trị, kinh tế và văn hóa lớn của Việt Nam."
+    }
+  },
+  "Đà Nẵng": {
+    "danSo": "1.233.400 người",
+    "dienTich": "1.284,73 km²",
+  
+
+    "leHoi": {
+      "image": "/img/pHoa.jpg",
+      "text": "Lễ hội pháo hoa quốc tế Đà Nẵng thu hút du khách khắp nơi."
+    },
+    "amThuc": {
+      "image": "/img/BTcuonThit.jpg",
+      "text": "Ẩm thực Đà Nẵng đa dạng nổi bật với hương vị đặc trưng của người dân miền Trung, đặc biệt nổi tiếng với bánh tráng thịt heo"
+    },
+    "lichSu": {
+      "image": "/img/ĐNxưa.jpg",
+      "text": "Từng là điểm đến chiến lược thời Pháp thuộc, phát triển nhanh từ thập niên 1990."
+    },
+    "moTa": {
+      "image": "/img/Crong.jpg",
+      "text": "Thành phố biển hiện đại, nổi tiếng với cầu Rồng và bãi biển Mỹ Khê."
+    }
+  },
+  "Hồ Chí Minh": {
+    "danSo": "9.456.700 người",
+    "dienTich": "2.095,39 km² với mật độ dân số vào khoảng: 4.513 người/km²",
+    "anh": ["/img/Landmark81.jpg"],
+    
+    "leHoi": {
+      "image": "/img/HoiAoDai.jpg",
+      "text": "Lễ hội Áo dài và lễ hội đường hoa Nguyễn Huệ là sự kiện nổi bật."
+    },
+    "amThuc": {
+      "image": "/img/ComTam.jpg",
+      "text": "Ẩm thực phong phú từ cổ điển đến hiện đại với hủ tiếu, bánh mì Sài Gòn đặc biệt rất nổi tiếng với cơm tấm Sài Gòn."
+    },
+    "lichSu": {
+      "image": "/img/SGxua.jpg",
+      "text": "Từng có tên là Sài Gòn, nay là trung tâm kinh tế lớn nhất cả nước."
+    },
+    "moTa": {
+      "image": "/img/ChoBenThanh.jpg",
+      "text": "Thành phố năng động nhất Việt Nam, phát triển với nhiều điểm đến hiện đại."
+    }
+  }
+}
