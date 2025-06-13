@@ -1,0 +1,274 @@
+:root {
+  --primary-color: #5579a3;
+  --secondary-color: #f5f5f5;
+  --text-color: #333;
+  --border-color: #ccc;
+}
+
+/* header navbar */
+/* Header fixed */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff !important;
+  /* màu chữ cho dễ nhìn trên header */
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #FFD700;
+  /* màu gạch chân, vàng dễ nhìn */
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+
+body {
+  background: linear-gradient(45deg, #6096FD, #FB7B8E, #031B88, #FB7B8E);
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(45deg, #FF7B89, #8A5082, #6F5F90, #758EB7, #A5CAD2, #FF7B89);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  ax-width: 1200px;
+  /* THÊM */
+  margin: 0 auto;
+}
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+
+.navbar-toggler {
+  padding: 0.25rem 0.5rem;
+  /* nhỏ hơn */
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  margin: 0;
+  max-width: 40px;
+  max-height: 40px;
+  border: none;
+  /* QUAN TRỌNG: bỏ margin mặc định */
+}
+
+.navbar-brand {
+  width: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFD700 !important;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #8A5082;
+  color: #fff;
+  padding: 20px;
+  transition: right 0.4s ease;
+  z-index: 9999;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar .close-btn {
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 50px 0 0 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 20px;
+}
+
+.sidebar-menu li a {
+  color: #fff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.sidebar-menu li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.sidebar-menu li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive cua header*/
+@media (max-width: 991.98px) {
+
+  .navbar-collapse {
+    display: none !important;
+  }
+
+  .sidebar {
+    display: block !important;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+
+
+/* article + profile */
+article {
+  background: linear-gradient(45deg, #E2D36B, #96D7C6, #AAB6FB);
+  width: 100%;
+  margin-top: 5rem !important;
+  border-radius: 20px;
+
+}
+
+h3::first-letter {
+  color: #47CACC;
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+span {
+  font-size: 6rem;
+  color: #031B88;
+}
+
+.card {
+  margin-top: 1.5rem;
+}
+
+.avatar-1 {
+  width: 50%;
+  align-self: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 1rem;
+  object-fit: cover;
+  border: 1px solid rgb(66, 66, 65);
+  box-shadow: 0 0 20px var(--primary-color), 0 0 40px rgb(43, 170, 177), 0 0 60px rgb(58, 189, 87);
+  animation: glow 4s ease-in-out infinite alternate, float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px var(--primary-color), 0 0 40px rgb(43, 170, 177), 0 0 60px rgb(58, 189, 87);
+  }
+
+  100% {
+    box-shadow: 0 0 30px var(--primary-color), 0 0 60px rgb(43, 170, 177), 0 0 120px rgb(58, 189, 87);
+  }
+}
+
+/* progress bar */
+.progress {
+  height: 20px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  width: 0;
+  transition: width 2s ease;
+}
+
+/* section lien he */
+section {
+  background-color: rgb(191, 187, 180);
+  width: 100%;
+}
+
+main,
+section {
+  background: linear-gradient(45deg, #CDB3D4, #FFBE88, #47CACC);
+  border-radius: 20px;
+  width: 100% !important;
+}
+
+
+
+
+/*căn giữa, không lệch khi responsive*/
+article,
+main,
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* để chắc chắn không có thanh ngang */
+  overflow-x: hidden;
+
+}

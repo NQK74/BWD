@@ -1,0 +1,468 @@
+:root {
+  --primary: rgb(79, 201, 114);
+  --secondary: rgb(50, 164, 216);
+  --bg: rgb(100, 90, 90);
+  --text: rgb(54, 22, 22);
+}
+
+/* header */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  margin-top: 90px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+body {
+  height: 100%;
+  background: linear-gradient(90deg, #cf79e5, #65cbea, #FBCFDB);
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  font-family: 'Times New Roman', Times, serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(45deg, #63d7d1, #76e683, #FBCFDB, #D6976B, #A38772);
+  /*lam mo*/
+  box-shadow: 0 2px 5px rgba(12, 12, 12, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 90px;
+  cursor: pointer;
+  padding: 1.5rem;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.tittle {
+  font-family: "Playwrite DK Loopet", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  margin-left: 5.5rem;
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.dropdown-item:hover {
+  background: #27f4f1;
+  color: black;
+}
+
+.dropdown-item:active {
+  background: #a7e690;
+  color: black;
+}
+
+/* menubar đã xóa - sử dụng CSS từ index-style.css */
+
+header i {
+  margin-right: 5px;
+}
+
+.bar-toggle {
+  display: none;
+}
+
+/* user-login CSS đã xóa - sử dụng từ index-style.css */
+
+.btn {
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+
+}
+
+.btn:hover {
+  background-color: #4fdd56;
+}
+
+.dropdown-menu {
+  width: 50px;
+  display: none;
+  position: absolute;
+  position: fixed;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+/* navbar */
+.slide-collapse {
+  position: fixed;
+  top: 0px;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(to right, #FDD273, #D6976B, #A38772);
+  z-index: 1050;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  padding: 1rem;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.slide-collapse.show {
+  transform: translateX(0);
+  transition: transform 0.4s ease-in-out;
+
+
+}
+
+.slide-collapse.hide {
+  transform: translateX(100%);
+
+}
+
+.d-block:hover {
+  font-weight: bold;
+  color: rgb(42, 190, 239);
+  text-decoration: none;
+  font-size: larger;
+}
+
+.slide-close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+}
+
+.navbar-toggler-icon,
+.navbar {
+  display: none;
+
+}
+
+.avatar {
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  height: 50%;
+  width: 50%;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.avatar:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+h4 {
+  cursor: pointer;
+}
+
+h4:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  color: rgba(210, 12, 232, 0.305);
+}
+
+.btn-contact {
+  background-color: #fdfdfd !important;
+  border: none !important;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 18px auto 0 auto;
+  display: flex !important; /* Thay đổi từ block thành flex */
+  align-items: center !important; /* Căn giữa theo chiều dọc */
+  justify-content: center !important; /* Căn giữa theo chiều ngang */
+  text-align: center !important;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-decoration: none !important; /* Loại bỏ gạch chân của link */
+  color: #333 !important; /* Màu chữ rõ ràng */
+  line-height: 1 !important; /* Đặt line-height cố định */
+  padding: 0 !important; /* Loại bỏ padding có thể ảnh hưởng */
+}
+
+.btn-contact:hover {
+  background-color: #14f3e1f2;
+  color: #222;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  text-decoration: none; /* Đảm bảo không có gạch chân khi hover */
+}
+
+.icons:hover {
+  transform: translateY(-3px);
+}
+
+.card.bg-card {
+
+  background: linear-gradient(45deg, #FFC8DD, #FFAFCC, #BDE0FE, #A2D2FF);
+}
+
+.card {
+  border-radius: 20px;
+  max-height: 375px;
+  animation: pulseCard 2s ease-in-out infinite;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulseCard {
+  0% {
+    transform: scale(0.98);
+  }
+
+  50% {
+    transform: scale(1.01);
+  }
+
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+.social-icon {
+  gap: 1rem;
+  padding-right: 1rem;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 575.98px) {
+  .tittle {
+    position: relative;    margin-left: 5rem;
+    font-size: 15px;
+  }
+
+  /* .user-login đã xóa */
+
+  li {
+    font-size: 10px;
+  }
+
+  h4 {
+    font-size: 13px;
+  }
+
+  .card {
+
+    height: 270px;
+    width: 140px;
+  }
+
+
+
+  .social-icon {
+    font-size: 12px;
+    padding: none;
+  }
+
+  .btn-contact {
+    width: 70px;
+    height: 20px;
+    font-size: 12px;
+  }
+
+
+}
+
+@media screen and (min-width: 576px) and (max-width: 740px) {
+  .tittle {
+    position: relative;
+    margin-left: 5rem;
+    font-size: 17px;
+  }
+
+  .user-login {
+    display: none !important;
+    /* Ẩn user */
+  }
+
+  .slogan {
+    font-size: 35px;
+  }
+
+  .social-icon {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 740.98px) and (max-width: 920px) {
+  .tittle {
+    position: relative;
+    margin-left: 5rem;
+    font-size: 20px;
+  }
+
+  .user-login {
+    display: none !important;
+  }
+
+  .card {
+    height: 370px;
+    width: 250px;
+    padding: 10px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (min-width: 920.02px) and (max-width: 1279.98px) {
+  .tittle {
+    position: relative;
+    margin-left: 5rem;
+    font-size: 20px;
+  }
+
+  .nav,
+  .menu-bar {
+    width: 500px;
+  }
+
+  .user-login {
+    display: none !important;
+  }
+
+  .fixed-right {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    flex-direction: column;
+  }
+
+  .navbar-toggler-icon {
+    display: flex;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .navbar-toggler-icon,
+  .navbar {
+    display: flex;
+  }
+
+  .slide-close-btn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .btn-contact {
+    width: 100px;
+    height: 40px;
+  }
+
+  .card {
+    height: 400px;
+    margin-top: 200px;
+
+
+  }
+
+  @media screen and (max-width: 1280.02px) {
+    nav.menu-bar {
+      display: none;
+    }
+
+    .user-login {
+      display: none !important;
+    }
+
+    .fixed-right {
+      display: flex;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      flex-direction: column;
+    }
+
+    .navbar-toggler-icon {
+      display: flex;
+      top: 1rem;
+      right: 1rem;
+      width: 40px;
+      font-size: 24px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1100;
+    }
+
+    .navbar-toggler-icon,
+    .navbar {
+      display: flex;
+    }
+
+    .slide-close-btn {
+      display: block;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+    }
+  }
+
+  /* hết header */
+
+  /* Active state đã chuyển vào inline CSS trong HTML file */
+
+  /* Override user-login để sử dụng CSS từ index-style.css */
+.user-login {
+  display: flex !important;
+  position: absolute !important;
+  right: 5.5rem !important;
+  top: auto !important;
+  align-items: center !important;
+  margin-left: 1rem !important;
+  font-size: 16px !important;
+}}
