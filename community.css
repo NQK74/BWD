@@ -1,0 +1,636 @@
+.body{
+    background-color: black;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+    background: linear-gradient(135deg, #d84b16, #f1a502, #ff5e00);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.home-image {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    clip-path: circle(90px at 50% 50%);
+}
+
+.navbar .nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%; 
+    justify-content: flex-start; 
+}
+
+.navbar .nav-items-image {
+   width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.navbar .nav-items span {
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-items span:hover {
+    color: #007bff;
+}
+.navbar button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    justify-content: flex-start;
+    padding-left: 15px;
+    height: 55px;
+    font-weight: bold;
+ 
+}
+.navbar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.navbar button span {
+    font-size: 16px;
+    margin-right: 15px; 
+     flex-grow: 1; 
+    text-align: left; 
+    margin-left: 10px; 
+}
+
+/* ========== Sidebar ========== */
+.sidebar {
+    width: 300px;
+    background: linear-gradient(135deg, #ff6347, #ff9900, #ffcc00);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh; 
+    overflow-y: auto;
+    z-index: 999; 
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-sizing: border-box;
+    /* Thêm shadow để tách biệt */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ========== Main Content ========== */
+.main-content {
+  margin-left: 320px;
+  margin-right: 320px;
+  margin-top: 100px;  /* Tăng khoảng cách trên của phần nội dung */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ========== Content Section ========== */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+}
+
+/* ========== Avatar ========== */
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* ========== Create Post ========== */
+.create-post {
+    padding: 10px 15px;
+    background: #f5f5f5;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-input {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    resize: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.post-input:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #fff;
+}
+
+/* ========== Button Styles ========== */
+button {
+    padding: 10px 16px;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+button:active {
+    transform: scale(0.98);
+    opacity: 0.85;
+}
+
+.video-btn {
+    background-color: #e74c3c;
+}
+
+.image-btn {
+    background-color: #2ecc71;
+}
+
+.emoji-btn {
+    background-color: #f39c12;
+    margin-right: auto;
+}
+
+.post-btn {
+    background-color: #3498db;
+    align-self: flex-end;
+}
+
+/* Button Layout */
+.create-post .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+/* ========== Post Container ========== */
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Khoảng cách giữa các bài post */
+    width: 100%;
+}
+
+/* ========== Post Container ========== */
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Khoảng cách giữa các bài post */
+    width: 100%;
+}
+
+/* ========== Post ========== */
+.post {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 800px; /* Đảm bảo độ rộng tối đa của bài post */
+    flex: 1 1 calc(33% - 30px); /* Chia thành 3 cột, giảm margin */
+    box-sizing: border-box;
+    margin-bottom: 30px; /* Tăng khoảng cách dưới mỗi bài post */
+}
+
+.post-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.post-images .post-image {
+  flex: 1 1 calc(50% - 10px);
+  max-height: 200px;
+}
+
+
+/* ========== Hover Effect ========== */
+.post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* ========== Post Header & Content ========== */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-content {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ========== Post Actions ========== */
+.post-actions {
+    display: flex;
+    justify-content: flex-end;  
+    gap: 15px;                  
+    margin-top: 15px;
+    font-size: 14px;
+    padding-right: 10px;        
+}
+
+.post-actions button {
+    color: #000 
+}
+.post-actions span {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.post-actions span:hover {
+    color: #007bff;
+}   
+
+.post-actions.btn{
+    font color: black;
+}
+
+/* ===== Global Search===== */
+.global-search-container {
+  position: fixed;
+  top: 0px; 
+  left: 320px;
+  right: 320px;
+  padding: 20px 0 10px;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  z-index: 900; 
+  width: calc(100% - 640px);
+  transition: top 0.3s ease-in-out;
+  margin-top: 10px;  
+  border-radius: 15px;
+}
+
+
+.global-search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.global-search-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* ===== Notification Panel (Sidebar) ===== */
+.notifications-panel {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.notifications-panel h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.notification-filter {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.notification-filter select {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.notification-list li:last-child {
+  border-bottom: none;
+}
+
+.notification-list img.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.notification-list span {
+  flex-grow: 1;
+  color: #222;
+}
+
+.notification-list small {
+  color: #888;
+  font-size: 12px;
+  margin-top: 2px;
+  display: block;
+}
+
+.mark-read-btn {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mark-read-btn:hover {
+  background-color: #bbb;
+}
+
+.see-all {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.see-all a {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.see-all a:hover {
+  text-decoration: underline;
+}
+
+/* Thu gọn danh sách thông báo */
+.notification-list.collapsed li:nth-child(n+5) {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .navbar,
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 0;
+    z-index: 100;
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #d84b16, #f1a502, #ff5e00);
+  }
+
+  .logo {
+    flex-direction: row;
+    font-size: 20px;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .home-image {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
+    clip-path: circle(20px at 50% 50%);
+  }
+
+  .nav-items {
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 120px;
+    padding: 10px;
+  }
+
+  .global-search-container {
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+
+  .post {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .notifications-panel {
+    max-height: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .post-input {
+    font-size: 14px;
+    height: 80px;
+  }
+
+  .post-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .notification-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-list img.avatar {
+    margin-bottom: 5px;
+  }
+}
+
+/* Thanh điều hướng dưới dành cho mobile */
+@media (max-width: 768px) {
+  .navbar, .sidebar {
+    display: none;
+  }
+
+  .navbar.show, .sidebar.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #d84b16, #f1a502, #ff5e00);
+    z-index: 1000;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .sidebar.show {
+    top: auto;
+    bottom: 60px;
+    border-top: 1px solid #ccc;
+  }
+
+ .mobile-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #d84b16, #f1a502, #ff5e00);
+  border-top: 2px solid #ffb347;
+  z-index: 9999;
+}
+
+.mobile-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  padding: 4px;
+}
+
+
+  .mobile-bottom-bar button {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 6px 10px;       /* giảm padding ngang */
+    border-radius: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;             /* không chiếm full chiều ngang */
+    min-width: 40px;         /* đặt min-width để nút không quá nhỏ */
+    flex-shrink: 0;
+    text-align: center;
+}
+  .mobile-bottom-bar button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+  }
+
+  body {
+    padding-bottom: 70px; /* để không bị che */
+  }
+}
