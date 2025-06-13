@@ -1,0 +1,215 @@
+  <!DOCTYPE html>
+  <html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Community Layout</title>
+    <link rel="stylesheet" href="community.css">
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="IMG/logo1.webp" alt="Home Image" class="home-image">
+        VIETNAM CULTURE
+      </div>
+      <div class="nav-items">
+
+        <button onclick="location.href='index.html'">
+          <img src="IMG/Home.webp" class="nav-items-image">
+        TRANG CHỦ
+
+        </button>
+
+        <button onclick="location.href='explore.html'">
+          <img src="IMG/explore.png" class="nav-items-image">
+        KHÁM PHÁ
+        </button>
+
+        <button onclick="location.href='community.html'">
+          <img src="IMG/community.png" class="nav-items-image">
+        CỘNG ĐỒNG
+        </button>
+
+        <button onclick="location.href='demoMap.html'">
+          <img src="IMG/map.png" class="nav-items-image">
+        MAP
+        </button>
+
+        <button onclick="location.href=''">
+          <img src="IMG/avt.jpg" class="nav-items-image" alt="User Avatar">
+          TRANG CÁ NHÂN
+        </button>
+
+      </div>
+    </nav>
+
+    <aside class="sidebar">
+      <div class="recommendations">
+      <!-- Bảng thông báo -->
+          <div class="notifications-panel">
+            <h3>NOTIFICATION</h3>
+
+            <!-- Bộ lọc -->
+            <div class="notification-filter">
+              <label for="filter">FILTER</label>
+              <select id="filter">
+                <option value="all">ALL</option>
+                <option value="comment">COMMENTS</option>
+                <option value="friend">FRIEND</option>
+              </select>
+            </div>
+
+            <!-- Danh sách thông báo -->
+            <ul class="notification-list" id="notificationList">
+              <li data-type="comment">
+                <img src="IMG/avatar1.jpg" class="avatar">
+                <span><strong>Ngọc Tu</strong> đã nhắc đến bạn trong một bình luận.</span>
+                <small>18 giờ</small>
+              </li>
+              <li data-type="comment">
+                <img src="IMG/avatar1.jpg" class="avatar">
+                <span><strong>Ngọc Tu</strong> bình luận về bài viết của <strong>Phương Linh</strong>.</span>
+                <small>18 giờ</small>
+              </li>
+              <li data-type="friend">
+                <img src="IMG/avatar2.jpg" class="avatar">
+                <span><strong>Uyên Nhi</strong> đã chấp nhận lời mời kết bạn.</span>
+                <small>1 ngày</small>
+              </li>
+              <li data-type="friend">
+                <img src="IMG/avatar3.jpg" class="avatar">
+                <span><strong>Nhật Thành</strong> đã chấp nhận lời mời kết bạn.</span>
+                <small>2 ngày</small>
+              </li>
+               <li data-type="comment">
+                <img src="IMG/avatar2.jpg" class="avatar">
+                <span><strong>Khánh Hân</strong> đã đăng 1 bài viết.</span>
+                <small>2 ngày</small>
+              </li>
+            </ul>
+            <div class="see-all" id="seeAllBtn">
+            <a href="javascript:void(0)" onclick="expandNotifications()">Xem tất cả thông báo</a>
+          </div>
+
+
+            <!-- Gợi ý và hành động -->
+            <small style="display:block; text-align:center; color:#aaa; margin-top:10px;">Hiển thị thông báo mới nhất trước</small>
+
+            <button onclick="markAllRead()" class="mark-read-btn">Đánh dấu tất cả là đã đọc</button>
+
+              </li>
+            </ul>
+          </div>
+
+      </div>
+    </aside>
+
+    <!-- Search -->
+    <div class="global-search-container">
+      <input type="text" class="global-search-input" placeholder="🔍 Tìm kiếm trên cộng đồng...">
+    </div>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <section class="content-section">
+        <!-- Create Post -->
+        <div class="create-post">
+          <div class="user-info">
+            <img src="IMG/avt.jpg" class="avatar" alt="User Avatar">
+            <textarea class="post-input" placeholder="Bạn đang nghĩ gì thế?"></textarea>
+          </div>
+          <div class="button-container">
+            <button class="image-btn">Ảnh/Video</button>
+            <button class="emoji-btn">Cảm xúc</button>
+            <button class="post-btn">Đăng</button>
+          </div>
+        </div>
+
+        <!-- Posts -->
+        <div class="post">
+          <div class="post-header">
+            <img src="IMG/avatar-demo.jpg" class="avatar" alt="avatar">
+            <div>
+              <h3>Mi Xào Chua Ngọt</h3>
+              <small>3 giờ trước · 🇻🇳</small>
+            </div>
+          </div>
+          <p>Hôm nay mình tham dự Lễ hội Đền Hùng ở Phú Thọ – dịp tưởng nhớ các Vua Hùng, tổ tiên của dân tộc Việt. Không khí linh thiêng và đầy tự hào! 🇻🇳🙏</p>
+          <img src="IMG/denhung.jpg" class="post-image" alt="">
+          <div class="post-actions">
+            <button class="like-btn" data-count="717" onclick="toggleLike(this)">👍<span class="like-count">717</span> <span class="like-text">Thích</span></button>
+            <button class="">💬<span> 103 Bình luận</span></button>
+            <button>↪️<span> 48 Chia sẻ</span></button>
+          </div>
+        </div>
+
+        <!-- Bài 2 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="IMG/avatar2.jpg" class="avatar" alt="avatar người dùng 2">
+            <div>
+              <h3>Lan Nở Rộ</h3>
+              <small>1 giờ trước · 🌸</small>
+            </div>
+          </div>
+          <p>Đã ghé Hội An mùa đèn lồng – phố cổ lung linh ánh sáng, hoài cổ và đậm chất văn hoá Việt. Ai mê kiến trúc xưa thì nên đi thử! 🏮🏯</p>
+          <img src="IMG/hoian.jpg" class="post-image" alt="Hội An đèn lồng">
+          <div class="post-actions">
+            <button class="like-btn" data-count="542" onclick="toggleLike(this)">👍 <span class="like-count">542</span> <span class="like-text">Thích</span></button>
+            <button><span>💬 87 Bình luận</span></button>
+            <button><span>↪️ 23 Chia sẻ</span></button>
+          </div>
+        </div>
+
+        <!-- Bài 3 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="IMG/avatar3.jpg" class="avatar" alt="avatar người dùng 3">
+            <div>
+              <h3>Minh “Coder”</h3>
+              <small>30 phút trước · 📚</small>
+            </div>
+          </div>
+          <p>Chia sẻ vài dòng suy ngẫm về tục thờ cúng tổ tiên trong gia đình Việt. Một nét đẹp nhân văn và đầy ý nghĩa. 🙏🏠</p>
+          <img src="IMG/tinnguon.jpg" class="post-image" alt="Thờ cúng tổ tiên">
+          <div class="post-actions">
+            <button class="like-btn" data-count="312" onclick="toggleLike(this)">👍<span class="like-count">312</span> <span class="like-text">Thích</span></button>
+            <button><span>💬 54 Bình luận</span></button>
+            <button><span>↪️ 12 Chia sẻ</span></button>
+          </div>
+        </div>
+
+        <!-- Bài 4 -->
+        <div class="post">
+          <div class="post-header">
+            <img src="IMG/avatar4.jpg" class="avatar" alt="avatar người dùng 4">
+            <div>
+              <h3>Thuỳ “Foodie”</h3>
+              <small>15 phút trước · 🍲</small>
+            </div>
+          </div>
+          <p>Hôm nay thử nấu bánh chưng theo cách truyền thống từ bà ngoại chỉ lại. Gói lá dong, luộc nồi bánh hơn 8 tiếng – quá đã luôn! 🎋🎉</p>
+          <img src="IMG/banhchung.jpg" class="post-image" alt="Gói bánh chưng truyền thống">
+          <div class="post-actions">
+            <button class="like-btn" data-count="198" onclick="toggleLike(this)">👍<span class="like-count">198</span> <span class="like-text">Thích</span></button>
+            <button><span>💬 34 Bình luận</span></button>
+            <button><span>↪️ 5 Chia sẻ</span></button>
+          </div>
+        </div>
+
+
+      </section>
+    </main>
+    <script src="community.js"></script>
+
+
+        <div class="mobile-bottom-bar">
+        <button id="toggleNav">☰</button>
+        
+        <button id="toggleSidebar">🔔</button>
+    </div>
+  </body>
+  </html>
